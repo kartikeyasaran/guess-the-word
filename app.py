@@ -3,7 +3,9 @@ import random
 
 app = Flask(__name__)
 
-words = ['rainbow', 'computer', 'science', 'programming', 'python']
+words = ['rainbow', 'computer', 'science', 'programming',
+		'python', 'mathematics', 'player', 'condition',
+		'reverse', 'water', 'board', 'morning','hello','evening','night','day','smooth','torch','good','bad','beautiful','ugly','messy','clean','house','home','garden','building','java','nice','adjust','congrates','then']
 
 @app.route('/')
 def index():
