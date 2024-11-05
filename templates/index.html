@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guessing Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🧩 Guess the Word!</h1>
+        <p class="word">{{ failed }}</p>
+        <p>Turns left: <strong>{{ turns }}</strong></p>
+        <form method="POST" id="guessForm" action="/guess">
+            <input type="text" name="guess" maxlength="1" required placeholder="Enter a letter" pattern="[A-Za-z]" id="guessInput">
+            <button type="submit">🕵️‍♂️ Guess</button>
+        </form>
+    </div>
+
+    <script>       
+        window.onload = function() {
+            document.getElementById('guessInput').focus();
+        };
+    </script>
+</body>
+</html>
